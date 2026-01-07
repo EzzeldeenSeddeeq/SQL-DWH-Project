@@ -1,3 +1,14 @@
+/*
+Loading Data Stored procedure:
+==================================================
+Function:
+	This Stored Procedure Bulk loades data from external csv files
+	into the Bronze layer using the TRUNCATE & INSERT method
+
+To use the scrtipt run this:
+	EXEC Bronze.load_bronze_layer
+*/
+
 CREATE OR ALTER PROCEDURE Bronze.load_bronze_layer AS
 BEGIN
 	DECLARE @start_time DATETIME, @end_time DATETIME, @layer_start_time DATETIME, @layer_end_time DATETIME;
